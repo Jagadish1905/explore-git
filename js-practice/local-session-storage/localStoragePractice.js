@@ -43,7 +43,7 @@ let lnameField = document.getElementById("Lname")
 let ageField = document.getElementById("age")
 let submit = document.getElementById("submit-btn")
 
-fnameField.value = localStorage.getItem("username") || "";
+fnameField.value = localStorage.getItem("firstname") || "";
 lnameField.value = localStorage.getItem("lastname") || "";
 ageField.value = localStorage.getItem("age") || "";
 
@@ -51,7 +51,7 @@ submit.addEventListener("click", () => {
     var firstname = fnameField.value
     var lastname = lnameField.value
     var age = ageField.value
-    localStorage.setItem("username", firstname)
+    localStorage.setItem("firstname", firstname)
     localStorage.setItem("lastname", lastname)
     localStorage.setItem("age", age)
 })
