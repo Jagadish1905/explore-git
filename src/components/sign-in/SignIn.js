@@ -1,9 +1,10 @@
 import React from 'react'
 import Header from './Header'
 import '../../assets/login.css'
+import SuggestionsCard from '../suggestions-card/SuggestionsCard'
 const SignIn = () => {
     return (
-        <div style={{ background: "black" }}>
+        <div>
             <div className='sign-in-container'>
                 <Header />
                 <div className='body-text'>
@@ -16,6 +17,7 @@ const SignIn = () => {
                     <button>Get Started</button>
                 </div>
             </div>
+            <SuggestionsCard />
         </div >
     )
 }

@@ -12,6 +12,8 @@ const Header = () => {
                     <select>
                         <option>English</option>
                         <option>Hindi</option>
+                        <option>Kannada</option>
+                        <option>Tamil</option>
                     </select>
                     <button >Sign In</button>
                 </div>
