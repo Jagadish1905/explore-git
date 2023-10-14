@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       {/* <Counter /> */}
       {/* <Hanuma /> */}
-      <File3 />
+      <h1>hello</h1>
       <File1 />
 
     </div>
