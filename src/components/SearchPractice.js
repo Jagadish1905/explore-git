@@ -9,7 +9,7 @@ useEffect(() => {
       .then((res) => res.json())
       .then((data) => {
         setData(data);
-        setFiltered(data); 
+        // setFiltered(data); 
       })
       .catch((error) => {
         console.log(error);
