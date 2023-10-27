@@ -1,21 +1,25 @@
-import logo from './logo.svg';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Hanuma from './component3/Hanuma';
-import File3 from './components/File3';
-import File1 from './components/File4';
-import Header from './components/sign-in/Header';
-import SignIn from './components/sign-in/SignIn';
-import GetButtonValue from './GetButtonValue';
-// import Counter from './components/Counter';
+
+import Login from './hoc-components/Login';
+import Contacts from './hoc-components/Contacts';
+import Dashboard from './hoc-components/Dashboard';
+import { ProtectedRoute } from './hoc-components/ProtectedRoute';
+import SearchPractice from './components/SearchPractice';
 
 function App() {
   return (
     <div className="App">
-      {/* <Counter /> */}
-      {/* <Hanuma /> */}
-      <h3>hiusdhfiush</h3>
-      <File1 />
-
+      {/* <Login /> */}
+      <SearchPractice/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login />}></Route>
+          <Route path="contacts" element={<ProtectedRoute Element={Contacts} />} >
+            <Route path="dashboard" element={<ProtectedRoute Element={Dashboard} />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
