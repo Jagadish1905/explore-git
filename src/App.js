@@ -10,13 +10,12 @@ import SearchPractice from './components/SearchPractice';
 function App() {
   return (
     <div className="App">
-      {/* <Login /> */}
-      <SearchPractice/>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Login />}></Route>
           <Route path="contacts" element={<ProtectedRoute Element={Contacts} />} >
             <Route path="dashboard" element={<ProtectedRoute Element={Dashboard} />} />
+            <Route path="search-practice" element={<SearchPractice/>}/>
           </Route>
         </Routes>
       </BrowserRouter>
